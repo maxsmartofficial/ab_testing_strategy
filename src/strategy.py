@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 import random
+from collections import defaultdict
 
 import os
 import sys
@@ -57,3 +58,60 @@ class RandomStrategy(Strategy):
         
     def update(self, page, result):
         pass
+        
+        
+class EpsilonGreedyStrategy(Strategy):
+
+    name = "Epsilon-greedy Strategy"
+    
+    def __init__(self, pages):
+        
+        for p in pages:
+            if not issubclass(p.__class__, src.page.Page):
+                raise Exception("Strategy must be given a list of Pages")
+                
+        self.pages = pages
+        self.page_names = {p.name: p for p in pages}
+        self.epsilon = 0.2
+        
+        self.totals = defaultdict(int)
+        self.successes = defaultdict(int)
+        
+        
+    def update(self, page, result):
+        
+        self.totals[page.name] += 1
+        if result:
+            self.successes[page.name] += 1
+            
+    def choice(self):
+        # Sometimes, or if there is currently no data
+        if random.random() < self.epsilon or sum(self.totals.values()) == 0:
+            # Return a page at random
+            return(random.choice(self.pages))
+            
+        else:
+            # Return the currently best performing page
+            average = 0
+            for p in self.page_names.keys():
+                if self.totals[p] != 0:
+                    mean = self.successes[p]/self.totals[p]
+                else:
+                    mean = 0
+                    
+                if mean > average:
+                    average = mean
+                    best_page = p
+                    
+            # If there is no page that has any positive results
+            if average == 0:
+                # Return a page at random
+                return(random.choice(self.pages))
+            else:
+                # Otherwise, return the best page
+                return(self.page_names[best_page])
+                    
+                
+            
+        
+    
