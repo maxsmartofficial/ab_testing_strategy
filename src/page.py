@@ -8,7 +8,7 @@ def getBernoulliPageList(probabilities):
     """
     lst = []
     for i in range(len(probabilities)):
-        name = "Page " + str(i + 1) + "(" + str(probabilities[i]*100) + "%)"
+        name = "Page " + str(i + 1) + " (" + str(probabilities[i]*100) + "%)"
         lst.append(BernoulliPage(probabilities[i], name=name))
     return(lst)
 
