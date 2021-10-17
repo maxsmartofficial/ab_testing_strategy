@@ -1,4 +1,7 @@
 from abc import ABC, abstractmethod
+import random
+
+import src.page
 
 class Strategy(ABC):
 
@@ -27,3 +30,22 @@ class Strategy(ABC):
         pass
         
         
+class RandomStrategy(Strategy):
+
+    """
+    A basic strategy that chooses pages at random
+    """
+    
+    def __init__(self, pages):
+        
+        for p in pages:
+            if not issubclass(p.__class__, src.page.Page):
+                raise Exception("Strategy must be given a list of Pages")
+                
+        self.pages = pages
+        
+    def choice(self):
+        return(random.choice(self.pages))
+        
+    def update(self, page, result):
+        pass
