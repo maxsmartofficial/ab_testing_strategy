@@ -9,8 +9,14 @@ import src.page
 
 def run(trials, strategies, pages):
 
+    # {strategy name: {total: ..., page name 1: ..., ...}}
+    results = {}
+
     for s in strategies:
-    
+        
+        name = s.name
+        page_totals = {p.name: 0 for p in pages}
+        
         # Set up strategy
         agent = s(pages)
         total = 0
@@ -24,10 +30,18 @@ def run(trials, strategies, pages):
             
             if result:
                 total += 1
-        print(s, ':', total)
+                page_totals[page.name] += 1
+                
+            agent.update(page, result)
+                
+        page_totals['total'] = total
+        results[name] = page_totals
+        
+    return(results)
             
 if __name__ == "__main__":
     TRIALS = 20000
-    STRATEGIES = [src.strategy.RandomStrategy]
+    STRATEGIES = [src.strategy.RandomStrategy, src.strategy.EpsilonGreedyStrategy]
     PAGES = src.page.getBernoulliPageList([0.04, 0.06])
-    run(TRIALS, STRATEGIES, PAGES)
+    results = run(TRIALS, STRATEGIES, PAGES)
+    print(results)
