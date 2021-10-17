@@ -1,9 +1,15 @@
 from abc import ABC, abstractmethod
 import random
 
+import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import src.page
 
 class Strategy(ABC):
+
+    name = "DEFAULT STRATEGY"
 
     @abstractmethod
     def __init__(self, pages):
@@ -35,6 +41,8 @@ class RandomStrategy(Strategy):
     """
     A basic strategy that chooses pages at random
     """
+    
+    name = "Random Strategy"
     
     def __init__(self, pages):
         

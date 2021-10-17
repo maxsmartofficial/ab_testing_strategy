@@ -8,7 +8,8 @@ def getBernoulliPageList(probabilities):
     """
     lst = []
     for i in range(len(probabilities)):
-        lst.append(BernoulliPage(probabilities[i]))
+        name = "Page " + str(i + 1) + "(" + str(probabilities[i]*100) + "%)"
+        lst.append(BernoulliPage(probabilities[i], name=name))
     return(lst)
 
 
@@ -34,7 +35,9 @@ class BernoulliPage(Page):
     i.e. people either convert or don't convert, with a given probability
     """
 
-    def __init__(self, probability):
+    def __init__(self, probability, name=""):
+    
+        self.name = name
         
         if type(probability) != int and type(probability) != float:
             raise Exception("Probability must be a number")
