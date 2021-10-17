@@ -3,23 +3,36 @@ import random
 
 
 def getBernoulliPageList(probabilities):
+    """
+    Return a list of BernoulliPages with specified probabilities
+    """
     lst = []
     for i in range(len(probabilities)):
         lst.append(BernoulliPage(probabilities[i]))
     return(lst)
 
+
+
 class Page(ABC):
     """
-    Implements a test() method that returns success 
+    Simulates whether people convert or not
+    Implements a test() method that returns success or failure
     """
     
     @abstractmethod
-    def test():
+    def test(self):
+        """
+        Test whether a conversion occurs
+        """
         pass
 
 
 
 class BernoulliPage(Page):
+    """
+    A simple page that represents a Bernoulli Trial
+    i.e. people either convert or don't convert, with a given probability
+    """
 
     def __init__(self, probability):
         
