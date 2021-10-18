@@ -18,7 +18,7 @@ def run(trials, strategies, pages):
         page_totals = {p.name: 0 for p in pages}
         
         # Set up strategy
-        agent = s(pages)
+        agent = s
         total = 0
     
         # Simulate 'trials' number of people accessing a page
@@ -41,7 +41,10 @@ def run(trials, strategies, pages):
             
 if __name__ == "__main__":
     TRIALS = 20000
-    STRATEGIES = [src.strategy.RandomStrategy, src.strategy.EpsilonGreedyStrategy]
     PAGES = src.page.getBernoulliPageList([0.04, 0.06])
-    results = run(TRIALS, STRATEGIES, PAGES)
+    AGENTS = [
+            src.strategy.RandomStrategy(PAGES),
+            src.strategy.EpsilonGreedyStrategy(PAGES, 0.2)
+        ]
+    results = run(TRIALS, AGENTS, PAGES)
     print(results)

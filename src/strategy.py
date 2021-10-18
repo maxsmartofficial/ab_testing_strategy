@@ -10,13 +10,13 @@ import src.page
 
 class Strategy(ABC):
 
-    name = "DEFAULT STRATEGY"
 
     @abstractmethod
     def __init__(self, pages):
         """
         Initialise the agent with the choice of pages
         """
+        name = "DEFAULT STRATEGY"
         pass
     
     @abstractmethod
@@ -43,9 +43,10 @@ class RandomStrategy(Strategy):
     A basic strategy that chooses pages at random
     """
     
-    name = "Random Strategy"
     
     def __init__(self, pages):
+    
+        self.name = "Random Strategy"
         
         for p in pages:
             if not issubclass(p.__class__, src.page.Page):
@@ -61,10 +62,12 @@ class RandomStrategy(Strategy):
         
         
 class EpsilonGreedyStrategy(Strategy):
-
-    name = "Epsilon-greedy Strategy"
     
-    def __init__(self, pages):
+    def __init__(self, pages, epsilon):
+    
+        self.name = "Epsilon-greedy Strategy (" + str("{:0.2f}".format(epsilon)) + ")"
+        
+        self.epsilon = epsilon
         
         for p in pages:
             if not issubclass(p.__class__, src.page.Page):
@@ -72,7 +75,6 @@ class EpsilonGreedyStrategy(Strategy):
                 
         self.pages = pages
         self.page_names = {p.name: p for p in pages}
-        self.epsilon = 0.2
         
         self.totals = defaultdict(int)
         self.successes = defaultdict(int)
