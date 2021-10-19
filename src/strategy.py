@@ -142,11 +142,7 @@ class EpsilonFirstStrategy(GreedyStrategy):
         super().__init__(pages)
         
         
-    def update(self, page, result):
-    
-        super().update(page, result)
-    
-        self.total += 1
+
         
             
     def choice(self):
@@ -158,3 +154,36 @@ class EpsilonFirstStrategy(GreedyStrategy):
             # Return best performing page
             return(self._getBestPage())
             
+
+
+class EpsilonDecreasingStrategy(GreedyStrategy):
+
+    def __init__(self, pages, epsilon, rate):
+        
+        self.name = "Epsilon-decreasing Strategy (" + \
+            str("{:0.2f}".format(epsilon)) + ", " + str("{:0.3f}".format(rate))+ ")"
+            
+        self.epsilon = epsilon
+        self.rate = rate
+        
+        self.total = 0
+        
+        super().__init__(pages)
+        
+        
+    def update(self, page, result):
+    
+        super().update(page, result)
+    
+        self.total += 1
+        
+        
+    def choice(self):
+        # The chance decreases with each new user
+        chance = self.epsilon * (self.rate**self.total)
+        if random.random() < chance:
+            # Choose a page at random
+            return(random.choice(self.pages))
+        else:
+            # Choose the best performing page
+            return(self._getBestPage())
