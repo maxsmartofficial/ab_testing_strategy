@@ -24,3 +24,21 @@ def test_output():
     agent = src.strategy.RandomStrategy(pages)
     result = agent.choice()
     assert(result in pages)
+
+# Test best page
+def test_best_page():
+    pages = src.page.getBernoulliPageList([0.1, 0.2])
+    agent = src.strategy.EpsilonGreedyStrategy(pages, 0.1)
+    # Create more successes for page 0 than page 1
+    for i in range(20):
+        agent.update(pages[0], True)
+    for i in range(20):
+        agent.update(pages[0], False)
+    for i in range(10):
+        agent.update(pages[1], True)
+    for i in range(30):
+        agent.update(pages[1], False)      
+
+    bestPage = agent._getBestPage()
+    assert(bestPage == pages[0])
+    
