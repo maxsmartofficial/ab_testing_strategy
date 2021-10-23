@@ -6,6 +6,8 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+from numpy.random import beta
+
 import src.page
 
 class Strategy(ABC):
@@ -187,3 +189,50 @@ class EpsilonDecreasingStrategy(GreedyStrategy):
         else:
             # Choose the best performing page
             return(self._getBestPage())
+            
+            
+class ThompsonSamplingStrategy(Strategy):
+    
+    def __init__(self, pages):
+    
+        self.name = "Thompson Sampling Strategy"
+        
+        for p in pages:
+            if not issubclass(p.__class__, src.page.Page):
+                raise Exception("Strategy must be given a list of Pages")
+                
+        self.pages = pages
+        self.page_names = {p.name: p for p in pages}
+        
+        self.totals = defaultdict(int)
+        self.successes = defaultdict(int)
+        
+    def update(self, page, result):
+        
+        self.totals[page.name] += 1
+        if result:
+            self.successes[page.name] += 1
+            
+    def choice(self):
+        # Sample from a beta distribution for each page
+        
+        maxSample = -1
+        bestPage = None
+        for p in self.page_names.keys():
+            # Prior distribution
+            a = b = 1
+            # Update parameters based on data
+            a += self.successes[p]
+            b += self.totals[p] - self.successes[p]
+            # Sample from posterior distribution
+            sample = beta(a, b)
+            
+            if sample > maxSample:
+                maxSample = sample
+                bestPage = p
+                
+        if bestPage is None:
+            raise Exception('No page was selected')
+            
+        return(self.page_names[bestPage])
+    
