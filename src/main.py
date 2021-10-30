@@ -44,7 +44,10 @@ if __name__ == "__main__":
     PAGES = src.page.getBernoulliPageList([0.04, 0.06])
     AGENTS = [
             src.strategy.RandomStrategy(PAGES),
-            src.strategy.EpsilonGreedyStrategy(PAGES, 0.2)
+            src.strategy.EpsilonGreedyStrategy(PAGES, 0.2),
+            src.strategy.EpsilonFirstStrategy(PAGES, 2000),
+            src.strategy.EpsilonDecreasingStrategy(PAGES, 0.2, 0.99),
+            src.strategy.ThompsonSamplingStrategy(PAGES)
         ]
     results = run(TRIALS, AGENTS, PAGES)
     print(results)
