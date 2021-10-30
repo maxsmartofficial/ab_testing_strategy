@@ -145,10 +145,10 @@ class EpsilonFirstStrategy(GreedyStrategy):
         
         
     def update(self, page, result):
+    
+        super().update(page, result)
+    
         self.total += 1
-        self.totals[page.name] += 1
-        if result:
-            self.successes[page.name] += 1
         
             
     def choice(self):
