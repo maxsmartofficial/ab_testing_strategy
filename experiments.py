@@ -45,12 +45,15 @@ def test(total, pages, tests=10):
 
 pages = src.page.getBernoulliPageList([0.04, 0.06])
 
-for TOTAL in [2000, 5000, 20000, 50000, 100000]:
+for TOTAL in [1000, 2000, 5000, 10000, 20000, 50000, 100000]:
     start = time.time()
     results = test(TOTAL, pages, tests=100)
     end = time.time()
-    print('Test finished in ' + str(end - start) + ' seconds.')
+    with open('results.txt', 'a') as f:
+        f.write('Simulating ' + str(TOTAL) + ' views.\n')
+        f.write('Test finished in ' + str(end - start) + ' seconds.\n')
     for r in results:
         median = "{:0.3f}".format(100 * numpy.median(results[r])/TOTAL) + '%'
         mean = "{:0.3f}".format(100 * numpy.mean(results[r])/TOTAL) + '%'
-        print(r + ' -  median: ' + median + ', mean: ' + mean)
+        with open('results.txt', 'a') as f:
+            f.write(r + ' -  median: ' + median + ', mean: ' + mean + '\n')
