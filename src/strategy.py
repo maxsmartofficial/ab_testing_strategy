@@ -113,7 +113,7 @@ class EpsilonGreedyStrategy(GreedyStrategy):
     
     def __init__(self, pages, epsilon):
     
-        self.name = "Epsilon-greedy Strategy (" + str("{:0.2f}".format(epsilon)) + ")"
+        self.name = "Epsilon-greedy Strategy (" + str("{:0.3f}".format(epsilon)) + ")"
         
         self.epsilon = epsilon
         
@@ -167,7 +167,7 @@ class EpsilonDecreasingStrategy(GreedyStrategy):
     def __init__(self, pages, epsilon, rate):
         
         self.name = "Epsilon-decreasing Strategy (" + \
-            str("{:0.2f}".format(epsilon)) + ", " + str("{:0.3f}".format(rate))+ ")"
+            str("{:0.3f}".format(epsilon)) + ", " + str("{:0.3f}".format(rate))+ ")"
             
         self.epsilon = epsilon
         self.rate = rate
