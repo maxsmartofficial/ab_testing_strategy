@@ -14,7 +14,7 @@ The first n users are directed to a randomly chosen page. After the first n user
 Each user is directed to a random page with probability e. Otherwise, they are directed to the best performing page so far. If there is no best performing page yet, they are again directed to a random page. This requires the probability e as a parameter.
 
 ### Epsilon-decreasing Strategy
-This strategy is similar to the epsilon-greedy strategy but with the probability e decreasing over time, as more users are directed. The probability e is given by e = e0 x r^T where e0 is the initial probability, r is the rate of decrease and T is the number of users encountered so far. This approach requires e0 and r as parameters.
+This strategy is similar to the epsilon-greedy strategy but with the probability e decreasing over time, as more users are directed. The probability e is given by e = e0 \* r^T where e0 is the initial probability, r is the rate of decrease and T is the number of users encountered so far. This approach requires e0 and r as parameters.
 
 ### Thompson Sampling Strategy
 Thompson Sampling involves assuming a prior distribution for how each page will perform, then updating these distributions based on observed results so far. We then sample from these posterior distributions, and display the page corresponding to the best performing sample. Given that we can assume each page has an inherent fixed conversion rate, we can model each page's probability of converting as a Beta Distribution Beta(a, b) where the parameters a and b are given by the number of successful and unsuccessful conversions respectively. We then sample from each page's distribution, and display the page with the highest sampled probability.
@@ -26,7 +26,7 @@ The table displays the results of the tests run over 100 simulations for a varyi
 N | 1,000 | 2,000 | 5,000 | 10,000 | 20,000 | 50,000 | 100,000
 --|-------|-------|-------|--------|--------|--------|--------
 Random | 4.906% (4.95%) | 5.08% (5.05%) | 4.97% (4.96%) | 5.006% (5%) | 5.001% (4.98%) | 5% (5.004%) | 5.007% (5.011%)
-Epsilon-first (e = 0.025) | 5.191% (5.4%) | 5.337% (5.6%) | %.564% (5.85%) | 5.807% (5.925%) | 5.834% (5.955%) | 5.963% (5.948%) | 5972% (5.972%)
+Epsilon-first (e = 0.025) | 5.191% (5.4%) | 5.337% (5.6%) | 5.564% (5.85%) | 5.807% (5.925%) | 5.834% (5.955%) | 5.963% (5.948%) | 5972% (5.972%)
 Epsilon-first (e = 0.05) | 5.378% (5.5%) | 5.146% (5.65%) | 5.701% (5.91%) | 5.737% (5.92%) | 5.946% (5.975%) | 5.951% (5.96%) | 5.946% (5.955%)
 Epsilon-first (e = 0.1) | 5.408% (5.5%) | 5.630% (5.775%) | 5.775% (5.9%) | 5.923% (5.915%) | 5.927% (5.920%) | 5.904% (5.902%) | 5.902% (5.914%)
 Epsilon-first (e = 0.2) | 5.476% (5.5%) | 5.622% (5.65%) | 5.714% (5.78%) | 5.746% (5.73%) | 5.755% (5.763%) | 5.808% (5.81%) | 5.792% (5.793%)
@@ -40,7 +40,7 @@ Epsilon-decreasing (e0 = 0.025, r = 0.99) | 5.165% (5.3%) | 5.104% (5.3%) | 5.37
 Epsilon-decreasing (e0 = 0.025, r = 0.997) | 5.453% (5.5%) | 5.223% (5.6%) | 5.363% (5.68%) | 5.249% (5.8%) | 5.245% (5.85%) | 5.346% (5.911%) | 5.45% (5.947%)
 Epsilon-decreasing (e0 = 0.025, r = 0.999) | 5.381% (5.4%) | 5.348% (5.75%) | 5.339% (5.66%) | 5.244% (5.765%) | 5.335% (5.85%) | 5.321% (5.948%) | 5.391% (5.949%)
 Epsilon-decreasing (e0 = 0.05, r = 0.99) | 5.307% (5.45%) | 5.176% (5.625%) | 5.21% (5.74%) | 5.288% (5.77%) | 5.329% (5.888%) | 5.247% (5.914%) | 5.061% (5.891%)
-'Epsilon-decreasing (e0 = 0.05, r = 0.997) | 5.345% (5.65%) | 5.194% (5.375%) | 5.403% (5.74%) | 5.348% (5.77%) | 5.401% (5.935%) | 5.272% (5.915%) | 5.379% (5.963%)
+Epsilon-decreasing (e0 = 0.05, r = 0.997) | 5.345% (5.65%) | 5.194% (5.375%) | 5.403% (5.74%) | 5.348% (5.77%) | 5.401% (5.935%) | 5.272% (5.915%) | 5.379% (5.963%)
 Epsilon-decreasing (e0 = 0.05, r = 0.999) | 5.172% (5.25%) | 5.317% (5.65%) | 5.553% (5.82%) | 5.453% (5.89%) | 5.48% (5.897%) | 5.478% (5.922%) | 5.427% (5.971%)
 Epsilon-decreasing (e0 = 0.1, r = 0.99) | 5.166% (5.2%) | 5.178% (5.5%) | 5.350% (5.85%) | 5.266% (5.785%) | 5.257% (5.89%) | 5.38% (5.893%) | 5.459% (5.955%)
 Epsilon-decreasing (e0 = 0.1, r = 0.997) | 5.465% (5.3%) | 5.434% (5.65%) | 5.443% (5.81%) | 5.574% (5.86%) | 5.435% (5.89%) | 5.556% (5.954%) | 5.327% (5.957%)
@@ -52,3 +52,15 @@ Epsilon-decreasing (e0 = 0.4, r = 0.99) | 5.234% (5.4%) | 5.515% (5.85%) | 5.516
 Epsilon-decreasing (e0 = 0.4, r = 0.997) | 5.475% (5.6%) | 5.43% (5.625%) | 5.548% (5.85%) | 5.74% (5.96%) | 5.605% (5.96%) | 5.618% (5.959%) | 5.636% (5.966%)
 Epsilon-decreasing (e0 = 0.4, r = 0.999) | 5.462% (5.5%) | 5.686% (5.7%) | 5.723% (5.85%) | 5.824% (5.915%) | 5.847% (5.935%) | 5.956% (5.984%) | 5.881% (5.974%)
 Thompson Sampling | 5.34% (5.3%) | 5.606% (5.675%) | 5.83% (5.78%) | 5.868% (5.875%) | 5.904% (5.895%) | 5.951% (5.962%) | 5.973% (5.97%)
+
+## Summary
+The expected number of 'exploratory' samples is approximately e \* N for an epsilon-first strategy and an epsilon-greedy strategy, and e0 / (1 - r) for an epsilon-decreasing strategy, where N is the total number of tests. With this in mind, it seems from the results that we need about 500 tests to reliably acheive significant results. This will depend on the difference between the inherent conversion rates of the two pages.
+
+### Benefits of Epsilon-strategies
+* Parameters can be set based on prior assumptions about conversion rates, but this requires knowledge of the relative difference in conversion rates to be effective.
+* There is an explicit differentiation between exploration and exploitation of results - you get a single best page at the end.
+
+### Benefits of Thompson Sampling
+* No parameters - doesn't require knowledge of actual conversion rates to set total number of tests, but needs a prior distribution.
+* The output is a posterior distribution which reflects our confidence in the result.
+
