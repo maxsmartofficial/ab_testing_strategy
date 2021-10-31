@@ -1,0 +1,203 @@
+Simulating 1000 views.
+Test finished in 7.658795356750488 seconds.
+Random Strategy -  median: 4.950%, mean: 4.906%
+Epsilon-first Strategy (25.0) -  median: 5.400%, mean: 5.191%
+Epsilon-first Strategy (50.0) -  median: 5.500%, mean: 5.378%
+Epsilon-first Strategy (100.0) -  median: 5.500%, mean: 5.408%
+Epsilon-first Strategy (200.0) -  median: 5.500%, mean: 5.476%
+Epsilon-first Strategy (400.0) -  median: 5.600%, mean: 5.508%
+Epsilon-greedy Strategy (0.025) -  median: 5.400%, mean: 5.249%
+Epsilon-greedy Strategy (0.05) -  median: 5.300%, mean: 5.263%
+Epsilon-greedy Strategy (0.10) -  median: 5.400%, mean: 5.404%
+Epsilon-greedy Strategy (0.20) -  median: 5.400%, mean: 5.329%
+Epsilon-greedy Strategy (0.40) -  median: 5.200%, mean: 5.269%
+Epsilon-decreasing Strategy (0.025, 0.990) -  median: 5.300%, mean: 5.165%
+Epsilon-decreasing Strategy (0.025, 0.997) -  median: 5.500%, mean: 5.453%
+Epsilon-decreasing Strategy (0.025, 0.999) -  median: 5.400%, mean: 5.381%
+Epsilon-decreasing Strategy (0.05, 0.990) -  median: 5.450%, mean: 5.307%
+Epsilon-decreasing Strategy (0.05, 0.997) -  median: 5.650%, mean: 5.345%
+Epsilon-decreasing Strategy (0.05, 0.999) -  median: 5.250%, mean: 5.172%
+Epsilon-decreasing Strategy (0.10, 0.990) -  median: 5.200%, mean: 5.166%
+Epsilon-decreasing Strategy (0.10, 0.997) -  median: 5.300%, mean: 5.465%
+Epsilon-decreasing Strategy (0.10, 0.999) -  median: 5.450%, mean: 5.388%
+Epsilon-decreasing Strategy (0.20, 0.990) -  median: 5.400%, mean: 5.284%
+Epsilon-decreasing Strategy (0.20, 0.997) -  median: 5.500%, mean: 5.375%
+Epsilon-decreasing Strategy (0.20, 0.999) -  median: 5.800%, mean: 5.639%
+Epsilon-decreasing Strategy (0.40, 0.990) -  median: 5.400%, mean: 5.234%
+Epsilon-decreasing Strategy (0.40, 0.997) -  median: 5.600%, mean: 5.475%
+Epsilon-decreasing Strategy (0.40, 0.999) -  median: 5.500%, mean: 5.462%
+Thompson Sampling Strategy -  median: 5.300%, mean: 5.340%
+Simulating 2000 views.
+Test finished in 28.445692777633667 seconds.
+Random Strategy -  median: 5.050%, mean: 5.080%
+Epsilon-first Strategy (50.0) -  median: 5.600%, mean: 5.337%
+Epsilon-first Strategy (100.0) -  median: 5.650%, mean: 5.416%
+Epsilon-first Strategy (200.0) -  median: 5.775%, mean: 5.630%
+Epsilon-first Strategy (400.0) -  median: 5.650%, mean: 5.622%
+Epsilon-first Strategy (800.0) -  median: 5.550%, mean: 5.548%
+Epsilon-greedy Strategy (0.025) -  median: 5.600%, mean: 5.263%
+Epsilon-greedy Strategy (0.05) -  median: 5.575%, mean: 5.381%
+Epsilon-greedy Strategy (0.10) -  median: 5.650%, mean: 5.473%
+Epsilon-greedy Strategy (0.20) -  median: 5.550%, mean: 5.452%
+Epsilon-greedy Strategy (0.40) -  median: 5.475%, mean: 5.452%
+Epsilon-decreasing Strategy (0.025, 0.990) -  median: 5.300%, mean: 5.104%
+Epsilon-decreasing Strategy (0.025, 0.997) -  median: 5.600%, mean: 5.223%
+Epsilon-decreasing Strategy (0.025, 0.999) -  median: 5.750%, mean: 5.348%
+Epsilon-decreasing Strategy (0.05, 0.990) -  median: 5.625%, mean: 5.176%
+Epsilon-decreasing Strategy (0.05, 0.997) -  median: 5.375%, mean: 5.194%
+Epsilon-decreasing Strategy (0.05, 0.999) -  median: 5.650%, mean: 5.317%
+Epsilon-decreasing Strategy (0.10, 0.990) -  median: 5.500%, mean: 5.178%
+Epsilon-decreasing Strategy (0.10, 0.997) -  median: 5.650%, mean: 5.434%
+Epsilon-decreasing Strategy (0.10, 0.999) -  median: 5.825%, mean: 5.584%
+Epsilon-decreasing Strategy (0.20, 0.990) -  median: 5.525%, mean: 5.290%
+Epsilon-decreasing Strategy (0.20, 0.997) -  median: 5.650%, mean: 5.459%
+Epsilon-decreasing Strategy (0.20, 0.999) -  median: 5.600%, mean: 5.460%
+Epsilon-decreasing Strategy (0.40, 0.990) -  median: 5.850%, mean: 5.515%
+Epsilon-decreasing Strategy (0.40, 0.997) -  median: 5.625%, mean: 5.430%
+Epsilon-decreasing Strategy (0.40, 0.999) -  median: 5.700%, mean: 5.686%
+Thompson Sampling Strategy -  median: 5.675%, mean: 5.606%
+Simulating 5000 views.
+Test finished in 72.51225590705872 seconds.
+Random Strategy -  median: 4.960%, mean: 4.970%
+Epsilon-first Strategy (125.0) -  median: 5.850%, mean: 5.564%
+Epsilon-first Strategy (250.0) -  median: 5.910%, mean: 5.701%
+Epsilon-first Strategy (500.0) -  median: 5.900%, mean: 5.775%
+Epsilon-first Strategy (1000.0) -  median: 5.780%, mean: 5.714%
+Epsilon-first Strategy (2000.0) -  median: 5.560%, mean: 5.591%
+Epsilon-greedy Strategy (0.025) -  median: 5.750%, mean: 5.542%
+Epsilon-greedy Strategy (0.05) -  median: 5.750%, mean: 5.545%
+Epsilon-greedy Strategy (0.10) -  median: 5.800%, mean: 5.680%
+Epsilon-greedy Strategy (0.20) -  median: 5.660%, mean: 5.605%
+Epsilon-greedy Strategy (0.40) -  median: 5.540%, mean: 5.534%
+Epsilon-decreasing Strategy (0.025, 0.990) -  median: 5.840%, mean: 5.370%
+Epsilon-decreasing Strategy (0.025, 0.997) -  median: 5.680%, mean: 5.363%
+Epsilon-decreasing Strategy (0.025, 0.999) -  median: 5.660%, mean: 5.339%
+Epsilon-decreasing Strategy (0.05, 0.990) -  median: 5.740%, mean: 5.210%
+Epsilon-decreasing Strategy (0.05, 0.997) -  median: 5.740%, mean: 5.403%
+Epsilon-decreasing Strategy (0.05, 0.999) -  median: 5.820%, mean: 5.553%
+Epsilon-decreasing Strategy (0.10, 0.990) -  median: 5.850%, mean: 5.350%
+Epsilon-decreasing Strategy (0.10, 0.997) -  median: 5.810%, mean: 5.443%
+Epsilon-decreasing Strategy (0.10, 0.999) -  median: 5.840%, mean: 5.591%
+Epsilon-decreasing Strategy (0.20, 0.990) -  median: 5.750%, mean: 5.186%
+Epsilon-decreasing Strategy (0.20, 0.997) -  median: 5.860%, mean: 5.597%
+Epsilon-decreasing Strategy (0.20, 0.999) -  median: 5.840%, mean: 5.615%
+Epsilon-decreasing Strategy (0.40, 0.990) -  median: 5.740%, mean: 5.516%
+Epsilon-decreasing Strategy (0.40, 0.997) -  median: 5.850%, mean: 5.548%
+Epsilon-decreasing Strategy (0.40, 0.999) -  median: 5.850%, mean: 5.723%
+Thompson Sampling Strategy -  median: 5.780%, mean: 5.830%
+Simulating 10000 views.
+Test finished in 141.46775197982788 seconds.
+Random Strategy -  median: 5.000%, mean: 5.006%
+Epsilon-first Strategy (250.0) -  median: 5.925%, mean: 5.807%
+Epsilon-first Strategy (500.0) -  median: 5.920%, mean: 5.737%
+Epsilon-first Strategy (1000.0) -  median: 5.915%, mean: 5.923%
+Epsilon-first Strategy (2000.0) -  median: 5.730%, mean: 5.746%
+Epsilon-first Strategy (4000.0) -  median: 5.630%, mean: 5.629%
+Epsilon-greedy Strategy (0.025) -  median: 5.820%, mean: 5.597%
+Epsilon-greedy Strategy (0.05) -  median: 5.805%, mean: 5.724%
+Epsilon-greedy Strategy (0.10) -  median: 5.770%, mean: 5.771%
+Epsilon-greedy Strategy (0.20) -  median: 5.710%, mean: 5.697%
+Epsilon-greedy Strategy (0.40) -  median: 5.550%, mean: 5.545%
+Epsilon-decreasing Strategy (0.025, 0.990) -  median: 5.790%, mean: 5.170%
+Epsilon-decreasing Strategy (0.025, 0.997) -  median: 5.800%, mean: 5.249%
+Epsilon-decreasing Strategy (0.025, 0.999) -  median: 5.765%, mean: 5.244%
+Epsilon-decreasing Strategy (0.05, 0.990) -  median: 5.770%, mean: 5.288%
+Epsilon-decreasing Strategy (0.05, 0.997) -  median: 5.770%, mean: 5.348%
+Epsilon-decreasing Strategy (0.05, 0.999) -  median: 5.890%, mean: 5.453%
+Epsilon-decreasing Strategy (0.10, 0.990) -  median: 5.785%, mean: 5.266%
+Epsilon-decreasing Strategy (0.10, 0.997) -  median: 5.860%, mean: 5.574%
+Epsilon-decreasing Strategy (0.10, 0.999) -  median: 5.820%, mean: 5.584%
+Epsilon-decreasing Strategy (0.20, 0.990) -  median: 5.755%, mean: 5.208%
+Epsilon-decreasing Strategy (0.20, 0.997) -  median: 5.950%, mean: 5.622%
+Epsilon-decreasing Strategy (0.20, 0.999) -  median: 5.905%, mean: 5.822%
+Epsilon-decreasing Strategy (0.40, 0.990) -  median: 5.840%, mean: 5.362%
+Epsilon-decreasing Strategy (0.40, 0.997) -  median: 5.960%, mean: 5.740%
+Epsilon-decreasing Strategy (0.40, 0.999) -  median: 5.915%, mean: 5.824%
+Thompson Sampling Strategy -  median: 5.875%, mean: 5.868%
+Simulating 20000 views.
+Test finished in 433.66247487068176 seconds.
+Random Strategy -  median: 4.980%, mean: 5.001%
+Epsilon-first Strategy (500.0) -  median: 5.955%, mean: 5.834%
+Epsilon-first Strategy (1000.0) -  median: 5.975%, mean: 5.946%
+Epsilon-first Strategy (2000.0) -  median: 5.920%, mean: 5.927%
+Epsilon-first Strategy (4000.0) -  median: 5.763%, mean: 5.755%
+Epsilon-first Strategy (8000.0) -  median: 5.622%, mean: 5.623%
+Epsilon-greedy Strategy (0.025) -  median: 5.900%, mean: 5.727%
+Epsilon-greedy Strategy (0.05) -  median: 5.952%, mean: 5.867%
+Epsilon-greedy Strategy (0.10) -  median: 5.860%, mean: 5.836%
+Epsilon-greedy Strategy (0.20) -  median: 5.760%, mean: 5.754%
+Epsilon-greedy Strategy (0.40) -  median: 5.565%, mean: 5.578%
+Epsilon-decreasing Strategy (0.025, 0.990) -  median: 5.883%, mean: 5.242%
+Epsilon-decreasing Strategy (0.025, 0.997) -  median: 5.850%, mean: 5.245%
+Epsilon-decreasing Strategy (0.025, 0.999) -  median: 5.850%, mean: 5.335%
+Epsilon-decreasing Strategy (0.05, 0.990) -  median: 5.888%, mean: 5.329%
+Epsilon-decreasing Strategy (0.05, 0.997) -  median: 5.935%, mean: 5.401%
+Epsilon-decreasing Strategy (0.05, 0.999) -  median: 5.897%, mean: 5.480%
+Epsilon-decreasing Strategy (0.10, 0.990) -  median: 5.890%, mean: 5.257%
+Epsilon-decreasing Strategy (0.10, 0.997) -  median: 5.890%, mean: 5.435%
+Epsilon-decreasing Strategy (0.10, 0.999) -  median: 5.935%, mean: 5.723%
+Epsilon-decreasing Strategy (0.20, 0.990) -  median: 5.870%, mean: 5.354%
+Epsilon-decreasing Strategy (0.20, 0.997) -  median: 5.935%, mean: 5.535%
+Epsilon-decreasing Strategy (0.20, 0.999) -  median: 5.925%, mean: 5.772%
+Epsilon-decreasing Strategy (0.40, 0.990) -  median: 5.935%, mean: 5.558%
+Epsilon-decreasing Strategy (0.40, 0.997) -  median: 5.960%, mean: 5.605%
+Epsilon-decreasing Strategy (0.40, 0.999) -  median: 5.935%, mean: 5.847%
+Thompson Sampling Strategy -  median: 5.895%, mean: 5.904%
+Simulating 50000 views.
+Test finished in 654.6845188140869 seconds.
+Random Strategy -  median: 5.004%, mean: 5.000%
+Epsilon-first Strategy (1250.0) -  median: 5.948%, mean: 5.963%
+Epsilon-first Strategy (2500.0) -  median: 5.960%, mean: 5.951%
+Epsilon-first Strategy (5000.0) -  median: 5.902%, mean: 5.904%
+Epsilon-first Strategy (10000.0) -  median: 5.810%, mean: 5.808%
+Epsilon-first Strategy (20000.0) -  median: 5.622%, mean: 5.619%
+Epsilon-greedy Strategy (0.025) -  median: 5.908%, mean: 5.867%
+Epsilon-greedy Strategy (0.05) -  median: 5.917%, mean: 5.908%
+Epsilon-greedy Strategy (0.10) -  median: 5.889%, mean: 5.871%
+Epsilon-greedy Strategy (0.20) -  median: 5.780%, mean: 5.771%
+Epsilon-greedy Strategy (0.40) -  median: 5.616%, mean: 5.599%
+Epsilon-decreasing Strategy (0.025, 0.990) -  median: 5.936%, mean: 5.209%
+Epsilon-decreasing Strategy (0.025, 0.997) -  median: 5.911%, mean: 5.346%
+Epsilon-decreasing Strategy (0.025, 0.999) -  median: 5.948%, mean: 5.321%
+Epsilon-decreasing Strategy (0.05, 0.990) -  median: 5.914%, mean: 5.247%
+Epsilon-decreasing Strategy (0.05, 0.997) -  median: 5.915%, mean: 5.272%
+Epsilon-decreasing Strategy (0.05, 0.999) -  median: 5.922%, mean: 5.478%
+Epsilon-decreasing Strategy (0.10, 0.990) -  median: 5.893%, mean: 5.380%
+Epsilon-decreasing Strategy (0.10, 0.997) -  median: 5.954%, mean: 5.556%
+Epsilon-decreasing Strategy (0.10, 0.999) -  median: 5.974%, mean: 5.743%
+Epsilon-decreasing Strategy (0.20, 0.990) -  median: 5.937%, mean: 5.321%
+Epsilon-decreasing Strategy (0.20, 0.997) -  median: 5.966%, mean: 5.552%
+Epsilon-decreasing Strategy (0.20, 0.999) -  median: 5.921%, mean: 5.685%
+Epsilon-decreasing Strategy (0.40, 0.990) -  median: 5.914%, mean: 5.358%
+Epsilon-decreasing Strategy (0.40, 0.997) -  median: 5.959%, mean: 5.618%
+Epsilon-decreasing Strategy (0.40, 0.999) -  median: 5.984%, mean: 5.956%
+Thompson Sampling Strategy -  median: 5.962%, mean: 5.951%
+Simulating 100000 views.
+Test finished in 1393.6577792167664 seconds.
+Random Strategy -  median: 5.011%, mean: 5.007%
+Epsilon-first Strategy (2500.0) -  median: 5.972%, mean: 5.972%
+Epsilon-first Strategy (5000.0) -  median: 5.955%, mean: 5.946%
+Epsilon-first Strategy (10000.0) -  median: 5.914%, mean: 5.902%
+Epsilon-first Strategy (20000.0) -  median: 5.793%, mean: 5.792%
+Epsilon-first Strategy (40000.0) -  median: 5.594%, mean: 5.590%
+Epsilon-greedy Strategy (0.025) -  median: 5.956%, mean: 5.929%
+Epsilon-greedy Strategy (0.05) -  median: 5.917%, mean: 5.919%
+Epsilon-greedy Strategy (0.10) -  median: 5.887%, mean: 5.887%
+Epsilon-greedy Strategy (0.20) -  median: 5.795%, mean: 5.795%
+Epsilon-greedy Strategy (0.40) -  median: 5.575%, mean: 5.580%
+Epsilon-decreasing Strategy (0.025, 0.990) -  median: 5.950%, mean: 5.361%
+Epsilon-decreasing Strategy (0.025, 0.997) -  median: 5.947%, mean: 5.450%
+Epsilon-decreasing Strategy (0.025, 0.999) -  median: 5.949%, mean: 5.391%
+Epsilon-decreasing Strategy (0.05, 0.990) -  median: 5.891%, mean: 5.061%
+Epsilon-decreasing Strategy (0.05, 0.997) -  median: 5.963%, mean: 5.379%
+Epsilon-decreasing Strategy (0.05, 0.999) -  median: 5.971%, mean: 5.427%
+Epsilon-decreasing Strategy (0.10, 0.990) -  median: 5.955%, mean: 5.459%
+Epsilon-decreasing Strategy (0.10, 0.997) -  median: 5.957%, mean: 5.327%
+Epsilon-decreasing Strategy (0.10, 0.999) -  median: 5.972%, mean: 5.650%
+Epsilon-decreasing Strategy (0.20, 0.990) -  median: 5.923%, mean: 5.260%
+Epsilon-decreasing Strategy (0.20, 0.997) -  median: 5.978%, mean: 5.562%
+Epsilon-decreasing Strategy (0.20, 0.999) -  median: 5.991%, mean: 5.804%
+Epsilon-decreasing Strategy (0.40, 0.990) -  median: 5.975%, mean: 5.447%
+Epsilon-decreasing Strategy (0.40, 0.997) -  median: 5.966%, mean: 5.636%
+Epsilon-decreasing Strategy (0.40, 0.999) -  median: 5.974%, mean: 5.881%
+Thompson Sampling Strategy -  median: 5.970%, mean: 5.973%
